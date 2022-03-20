@@ -1,0 +1,325 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--dark-bg-color);
+  background-image: url("../img/filter.png");
+  background-attachment: fixed;
+  background-position: bottom;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  padding: 50px;
+  width: 75%;
+  margin: 50px auto 125px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+main .deck__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main .deck__container .chance__card__container {
+  cursor: pointer;
+  border: solid 1px black;
+  border-radius: 5px;
+  background-image: url("../img/chance_card.png");
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 300px;
+  transform: rotate(90deg);
+}
+main .deck__container .community__card__container {
+  border: solid 1px black;
+  border-radius: 5px;
+  background-image: url("../img/community__card.png");
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 300px;
+  transform: rotate(-90deg);
+}
+main .display__container {
+  font-family: "Kanit-ExtraLight", sans-serif;
+}
+main .display__container .display__none {
+  display: none;
+}
+main .display__container .card__container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+  margin: auto;
+}
+main .display__container .card__container .card__content {
+  width: 100%;
+  margin: 10px;
+  border: solid 3px black;
+  border-radius: 10px;
+  background-color: #CADDD2;
+  display: flex;
+  flex-direction: column;
+}
+main .display__container .card__container .card__content hr {
+  width: 100%;
+}
+main .display__container .card__container .card__content h2 {
+  padding: 0;
+  margin: 15px 0 15px 0;
+  font-size: var(--fs-m);
+  color: var(--dark-hx-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+main .display__container .card__container .card__content .effect {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .display__container .card__container .card__content .effect .effect_element {
+  display: flex;
+  gap: 10px;
+}
+main .display__container .card__container .card__content .effect .effect_element .effect__female__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .display__container .card__container .card__content .effect .effect_element .effect__male__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .display__container .card__container .card__content .effect p {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-s);
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+main .display__container .card__container .card__content .effect i {
+  font-size: var(--fs-m);
+}
+main .display__container .card__container .card__content .info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #9BBFAA;
+}
+main .display__container .card__container .card__content .info .info__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .display__container .card__container .card__content .info .info__title i {
+  font-size: var(--fs-m);
+}
+main .display__container .card__container .card__content .info .info__title h3 {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-s);
+  color: var(--dark-hx-color);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+main .display__container .card__container .card__content .info .info__text p {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-s);
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+main .dice__container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit-ExtraLight", sans-serif;
+}
+main .dice__container button {
+  cursor: pointer;
+  height: 50px;
+  padding: 10px;
+  border: solid var(--dark-btn-rbg) 1px;
+  border-radius: 10px;
+  background-color: var(--dark-btn-color);
+  color: black;
+  font-size: var(--fs-m);
+  letter-spacing: 2px;
+}
+main .swiper {
+  font-family: "Kanit-ExtraLight", sans-serif;
+}
+main .swiper .card__container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  width: 100%;
+}
+main .swiper .card__container i {
+  font-size: var(--fs-m);
+}
+main .swiper .card__container .card__content {
+  width: 100%;
+  margin: 10px;
+  border: solid 3px black;
+  border-radius: 10px;
+  background-color: #CADDD2;
+  display: flex;
+  flex-direction: column;
+}
+main .swiper .card__container .card__content .place__title {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .swiper .card__container .card__content .place__title h3 {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-s);
+  color: var(--dark-hx-color);
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1.25px;
+}
+main .swiper .card__container .card__content .place__title h2 {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-m);
+  color: var(--dark-hx-color);
+  text-align: center;
+  font-weight: 600;
+}
+main .swiper .card__container .card__content .place__info {
+  padding: 15px;
+}
+main .swiper .card__container .card__content .place__info h2 {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-m);
+  color: var(--dark-hx-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+main .swiper .card__container .card__content .place__info span {
+  font-size: var(--fs-s);
+  color: var(--dark-hx-color);
+  font-weight: 400;
+  letter-spacing: 1.25px;
+}
+main .swiper .card__container .card__content .place__info .place__buy {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .swiper .card__container .card__content .place__info .place__buy h2 {
+  flex-grow: 2;
+}
+main .swiper .card__container .card__content .place__info .place__rent {
+  margin: 15px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .swiper .card__container .card__content .place__info .place__rent .element {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .swiper .card__container .card__content .place__info .place__rent .element .home {
+  flex-grow: 2;
+}
+main .swiper .card__container .card__content .place__info .benefit__info {
+  margin: 15px 0 15px 0;
+}
+main .swiper .card__container .card__content .place__info .benefit__info p {
+  padding: 0;
+  margin: 0;
+  font-size: var(--fs-s);
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+main .swiper .card__container .card__content .place__info .house__price {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .swiper .card__container .card__content .place__info .house__price .home {
+  flex-grow: 2;
+}
+main .swiper .card__container .card__content .place__info .hr {
+  margin-bottom: 15px;
+}
+main .swiper .card__container .card__content .place__info .place__sell {
+  margin: 15px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .swiper .card__container .card__content .place__info .place__sell span {
+  font-size: var(--fs-s);
+  color: var(--dark-hx-color);
+  font-weight: 400;
+  letter-spacing: 1.25px;
+}
+
+.green__bg {
+  background-color: #9BBFAA;
+  border-radius: 5px;
+}
+
+.red__bg {
+  background-color: #e74c3c;
+  border-radius: 5px;
+}
+
+.blue__bg {
+  background-color: #2980b9;
+  border-radius: 5px;
+}
+
+.orange__bg {
+  background-color: #f39c12;
+  border-radius: 5px;
+}
+
+.violet__bg {
+  background-color: #9b59b6;
+  border-radius: 5px;
+}
+
+.yellow__bg {
+  background-color: #fdcb6e;
+  border-radius: 5px;
+}
+
+#dice {
+  font-size: 6rem;
+  color: white;
+}
+
+/*# sourceMappingURL=game.css.map */

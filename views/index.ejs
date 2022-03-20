@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./public/css/swiper.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/game.css">
+
+    <!-- LIBS -->
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <title>ODD | Projet</title>
+</head>
+<body>
+    <header class="header">
+        <%- include("./parts/header"); -%>
+    </header>
+
+    <main>
+
+        <div class="deck__container">
+            <div id="chanceCard" class="chance__card__container"></div>
+            <div id="communityCard" class="community__card__container"></div>
+        </div>
+
+        <div id="displayContainer" class="display__container" style="height: 500px">
+            <div data="0" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous gagnez <strong>$50</strong> !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>
+                                        Vous êtes victime d'harcèlement dans les transports...
+                                        Vous remportez le procès au tribunal !
+                                    </p>
+                                    <p>Vous gagnez <strong>$40</strong> !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p><strong>96%</strong> des victimes d'agression sexuel sont des femmes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="1" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous payez vos frais de scolarité : <strong>$150</strong> !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Vous payez vos frais de scolarité : <strong>$150</strong> !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="2" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous recevez votre paye hebdomadaire de <strong>$300</strong> !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Vous recevez votre paye hebdomadaire de <strong>$250</strong> !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p>En 2017, les hommes perçoivent en moyenne un salaire supérieur de <strong>96%</strong> à celui des femmes. (Insee)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="3" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Allez directement en prison, ne passez pas par la case départ !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Allez directement en prison, ne passez pas par la case départ !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="4" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous rentrez du travail en toute sécurité</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>
+                                        En rentrant du travail, vous êtes victimes d'un racket !
+                                    </p>
+                                    <p>Vous perdez <strong>$50</strong> !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p><strong>14%</strong> des femmes ne se sentent pas en sécurités dans leurs villes/villages contre 8% des hommes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="5" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Avancez jusqu'à la case départ !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Avancez jusqu'à la case départ !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="6" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous faites redécorer vos propriétés pour <strong>$250/p</strong> !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Vous faites redécorer vos propriétés pour <strong>$300/p</strong> !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p>En 2020 <strong>9%</strong> des femmes entre 20 et 24 ans sont victimes d'escroqueries. (échantillon de 1000 personnes)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="7" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <div class="effect__male__text">
+                                    <p>La banque commet une erreur !</p>
+                                    <p>Vous recevez <strong>$50</strong></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>La banque commet une erreur !</p>
+                                    <p>Vous recevez <strong>$50</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="8" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Vous pouvez rejouer !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>
+                                        Aujourd'hui c'est jour de ménage !
+                                    </p>
+                                    <p>Vous passez votre tour !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p><strong>3h30</strong> c'est le temps consacré par les femmes aux tâches domestiques contre 2h pour les hommes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="9" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <p>Votre vie se passe à merveille !</p>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>
+                                        Consultation chez le psychologue.
+                                    </p>
+                                    <p>Vous payez <strong>$50</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info__title">
+                                <i class='bx bx-info-circle'></i>
+                                <h3>Statistique</h3>
+                            </div>
+                            <div class="info__text">
+                                <p><strong>58%</strong> des femmes se disent en détresse psychologique lors du second confinement contre 38% chez les hommes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data="10" class="display__none">
+                <div class="card__container">
+                    <div class="card__content">
+                        <h2>CHANCE</h2>
+                        <div class="effect">
+                            <div class="effect_element">
+                                <i class='bx bx-male-sign'></i>
+                                <div class="effect__male__text">
+                                    <p>Vous complétez le sutom du jour !</p>
+                                    <p>Vous recevez <strong>$150</strong></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="effect_element">
+                                <i class='bx bx-female-sign'></i>
+                                <div class="effect__female__text">
+                                    <p>Vous complétez le sutom du jour !</p>
+                                    <p>Vous recevez <strong>$150</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title green__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Junia ISEN</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$25</span>
+                                    <span><i class='bx bx-female-sign'></i>$50</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$120</span>
+                                        <span><i class='bx bx-female-sign'></i>$240</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$240</span>
+                                        <span><i class='bx bx-female-sign'></i>$480</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$480</span>
+                                        <span><i class='bx bx-female-sign'></i>$720</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$720</span>
+                                        <span><i class='bx bx-female-sign'></i>$960</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$960</span>
+                                        <span><i class='bx bx-female-sign'></i>$1200</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$150</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$175</span>
+                                    <span><i class='bx bx-female-sign'></i>$250</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$300</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title green__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Junia HEI</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$45</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$110</span>
+                                        <span><i class='bx bx-female-sign'></i>$220</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$220</span>
+                                        <span><i class='bx bx-female-sign'></i>$440</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$440</span>
+                                        <span><i class='bx bx-female-sign'></i>$660</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$660</span>
+                                        <span><i class='bx bx-female-sign'></i>$880</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$880</span>
+                                        <span><i class='bx bx-female-sign'></i>$1100</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$150</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$150</span>
+                                    <span><i class='bx bx-female-sign'></i>$225</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$200</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title green__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Junia ISA</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$10</span>
+                                    <span><i class='bx bx-female-sign'></i>$20</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$110</span>
+                                        <span><i class='bx bx-female-sign'></i>$220</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$220</span>
+                                        <span><i class='bx bx-female-sign'></i>$440</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$440</span>
+                                        <span><i class='bx bx-female-sign'></i>$660</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$660</span>
+                                        <span><i class='bx bx-female-sign'></i>$880</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$880</span>
+                                        <span><i class='bx bx-female-sign'></i>$1100</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$150</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$150</span>
+                                    <span><i class='bx bx-female-sign'></i>$225</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$150</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title red__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Parvis de la Tour Eiffel</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$25</span>
+                                    <span><i class='bx bx-female-sign'></i>$50</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$220</span>
+                                        <span><i class='bx bx-female-sign'></i>$420</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$420</span>
+                                        <span><i class='bx bx-female-sign'></i>$840</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$840</span>
+                                        <span><i class='bx bx-female-sign'></i>$1260</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$1260</span>
+                                        <span><i class='bx bx-female-sign'></i>$1680</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$1680</span>
+                                        <span><i class='bx bx-female-sign'></i>$2100</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$250</span>
+                                    <span><i class='bx bx-female-sign'></i>$300</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$300</span>
+                                    <span><i class='bx bx-female-sign'></i>$350</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$700</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title red__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Avenue des Champs Elysée</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$25</span>
+                                    <span><i class='bx bx-female-sign'></i>$50</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$225</span>
+                                        <span><i class='bx bx-female-sign'></i>$450</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$450</span>
+                                        <span><i class='bx bx-female-sign'></i>$900</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$900</span>
+                                        <span><i class='bx bx-female-sign'></i>$1350</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$1350</span>
+                                        <span><i class='bx bx-female-sign'></i>$1800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$1800</span>
+                                        <span><i class='bx bx-female-sign'></i>$2250</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$300</span>
+                                    <span><i class='bx bx-female-sign'></i>$350</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$350</span>
+                                    <span><i class='bx bx-female-sign'></i>$400</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$900</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title red__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue Desmazières</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$10</span>
+                                    <span><i class='bx bx-female-sign'></i>$20</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$30</span>
+                                        <span><i class='bx bx-female-sign'></i>$60</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$60</span>
+                                        <span><i class='bx bx-female-sign'></i>$120</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$120</span>
+                                        <span><i class='bx bx-female-sign'></i>$240</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$240</span>
+                                        <span><i class='bx bx-female-sign'></i>$300</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$300</span>
+                                        <span><i class='bx bx-female-sign'></i>$360</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$70</span>
+                                    <span><i class='bx bx-female-sign'></i>$140</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$70</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title blue__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue du Général De Gaulle</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$10</span>
+                                    <span><i class='bx bx-female-sign'></i>$20</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$30</span>
+                                        <span><i class='bx bx-female-sign'></i>$60</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$60</span>
+                                        <span><i class='bx bx-female-sign'></i>$120</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$120</span>
+                                        <span><i class='bx bx-female-sign'></i>$240</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$240</span>
+                                        <span><i class='bx bx-female-sign'></i>$300</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$300</span>
+                                        <span><i class='bx bx-female-sign'></i>$360</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$70</span>
+                                    <span><i class='bx bx-female-sign'></i>$140</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$70</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title blue__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Gare Lille Europe</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$600</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$800</span>
+                                        <span><i class='bx bx-female-sign'></i>$1000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title blue__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Croisée Laroche</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$15</span>
+                                    <span><i class='bx bx-female-sign'></i>$30</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$50</span>
+                                        <span><i class='bx bx-female-sign'></i>$100</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$300</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$500</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$500</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$100</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title orange__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Avenue de Verdun</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$15</span>
+                                    <span><i class='bx bx-female-sign'></i>$30</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$50</span>
+                                        <span><i class='bx bx-female-sign'></i>$100</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$300</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$500</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$500</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$100</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title orange__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue de l'Hippodrome</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$15</span>
+                                    <span><i class='bx bx-female-sign'></i>$30</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$55</span>
+                                        <span><i class='bx bx-female-sign'></i>$105</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$105</span>
+                                        <span><i class='bx bx-female-sign'></i>$205</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$205</span>
+                                        <span><i class='bx bx-female-sign'></i>$305</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$405</span>
+                                        <span><i class='bx bx-female-sign'></i>$505</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$505</span>
+                                        <span><i class='bx bx-female-sign'></i>$605</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$125</span>
+                                    <span><i class='bx bx-female-sign'></i>$185</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$105</span>
+                                    <span><i class='bx bx-female-sign'></i>$205</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$110</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title orange__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue des Chamettes</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$15</span>
+                                    <span><i class='bx bx-female-sign'></i>$30</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$60</span>
+                                        <span><i class='bx bx-female-sign'></i>$110</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$110</span>
+                                        <span><i class='bx bx-female-sign'></i>$210</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$210</span>
+                                        <span><i class='bx bx-female-sign'></i>$310</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$410</span>
+                                        <span><i class='bx bx-female-sign'></i>$510</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$510</span>
+                                        <span><i class='bx bx-female-sign'></i>$610</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$130</span>
+                                    <span><i class='bx bx-female-sign'></i>$190</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$110</span>
+                                    <span><i class='bx bx-female-sign'></i>$210</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$120</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title violet__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue de la Carnay</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$80</span>
+                                        <span><i class='bx bx-female-sign'></i>$160</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$160</span>
+                                        <span><i class='bx bx-female-sign'></i>$320</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$320</span>
+                                        <span><i class='bx bx-female-sign'></i>$640</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$640</span>
+                                        <span><i class='bx bx-female-sign'></i>$720</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$720</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$130</span>
+                                    <span><i class='bx bx-female-sign'></i>$170</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$175</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title violet__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Gare d'Anger</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$600</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$800</span>
+                                        <span><i class='bx bx-female-sign'></i>$1000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title violet__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Avenue Becart</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$15</span>
+                                    <span><i class='bx bx-female-sign'></i>$30</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$70</span>
+                                        <span><i class='bx bx-female-sign'></i>$140</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$140</span>
+                                        <span><i class='bx bx-female-sign'></i>$280</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$280</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$520</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$520</span>
+                                        <span><i class='bx bx-female-sign'></i>$640</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$100</span>
+                                    <span><i class='bx bx-female-sign'></i>$200</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$130</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title yellow__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Gare de Dunkerque</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$600</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$800</span>
+                                        <span><i class='bx bx-female-sign'></i>$1000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title yellow__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Rue du Général Leclerc</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$600</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$800</span>
+                                        <span><i class='bx bx-female-sign'></i>$1000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card__container">
+                        <div class="card__content">
+                            <div class="place__title yellow__bg">
+                                <h3>TITRE DE PROPRIÉTÉ</h3>
+                                <h2>Gare de Marseille St Charles</h2>
+                            </div>
+                            <div class="place__info">
+                                <div class="place__buy">
+                                    <h2>ACHAT</h2>
+                                    <span><i class='bx bx-male-sign'></i>$20</span>
+                                    <span><i class='bx bx-female-sign'></i>$40</span>
+                                </div>
+                                <h2>LOYER</h2>
+                                <div class="place__rent">
+                                    <div class="element">
+                                        <i class='bx bx-home home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$100</span>
+                                        <span><i class='bx bx-female-sign'></i>$200</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$200</span>
+                                        <span><i class='bx bx-female-sign'></i>$400</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$400</span>
+                                        <span><i class='bx bx-female-sign'></i>$600</span>
+                                    </div>
+                                    <div class="element">
+                                        <div class="home">
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                            <i class='bx bx-home'></i>
+                                        </div>
+                                        <span><i class='bx bx-male-sign'></i>$600</span>
+                                        <span><i class='bx bx-female-sign'></i>$800</span>
+                                    </div>
+                                    <div class="element">
+                                        <i class='bx bx-home-circle home'></i>
+                                        <span><i class='bx bx-male-sign'></i>$800</span>
+                                        <span><i class='bx bx-female-sign'></i>$1000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="benefit__info">
+                                    <p>
+                                        Si un joueur possède <strong>TOUS</strong> les terrains d'un Groupe de Couleur, le
+                                        loyer des terrains nus de ce groupe est doublé pour les <strong>femmes</strong>.
+                                    </p>
+                                </div>
+                                <hr class="hr">
+                                <h2>Prix des maisons</h2>
+                                <div class="house__price">
+                                    <i class='bx bx-home home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$120</span>
+                                    <span><i class='bx bx-female-sign'></i>$180</span>
+                                </div>
+                                <div class="house__price">
+                                    <i class='bx bx-home-circle home'></i>
+                                    <span><i class='bx bx-male-sign'></i>$140</span>
+                                    <span><i class='bx bx-female-sign'></i>$240</span>
+                                </div>
+                                <div class="place__sell">
+                                    <span>Valeur hypothécaire du terrain</span>
+                                    <span><strong>$100</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="dice__container">
+            <button id="rollTheDiceBtn">Lancer le dés</button>
+            <div id="dice"></div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script type="module" src="./public/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+//===================================================
+//
+//              GAME SCSS
+//
+//===================================================
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--dark-bg-color);
+  background-image: url("../img/filter.png");
+  background-attachment: fixed;
+  background-position: bottom;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  padding: 50px;
+  width: 75%;
+  margin: 50px auto 125px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+
+  .deck__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .chance__card__container {
+      cursor: pointer;
+      border: solid 1px black;
+      border-radius: 5px;
+      background-image: url("../img/chance_card.png");
+      background-position: center;
+      background-size: cover;
+      width: 200px;
+      height: 300px;
+      transform: rotate(90deg);
+    }
+
+    .community__card__container {
+      border: solid 1px black;
+      border-radius: 5px;
+      background-image: url("../img/community__card.png");
+      background-position: center;
+      background-size: cover;
+      width: 200px;
+      height: 300px;
+      transform: rotate(-90deg);
+    }
+
+  }
+
+  .display__container {
+    font-family: "Kanit-ExtraLight", sans-serif;
+
+    .display__none {
+      display: none;
+    }
+
+    .card__container {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      border-radius: 10px;
+      width: 30%;
+      margin: auto;
+
+      .card__content {
+        width: 100%;
+        margin: 10px;
+        border: solid 3px black;
+        border-radius: 10px;
+        background-color: #CADDD2;
+        display: flex;
+        flex-direction: column;
+
+        hr { width: 100%; }
+
+        h2 {
+          padding: 0;
+          margin: 15px 0 15px 0;
+          font-size: var(--fs-m);
+          color: var(--dark-hx-color);
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-align: center;
+        }
+
+        .effect {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .effect_element {
+            display: flex;
+            gap: 10px;
+
+            .effect__female__text {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            }
+
+            .effect__male__text {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            }
+
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+            font-size: var(--fs-s);
+            letter-spacing: 1px;
+            line-height: 1.4rem;
+            text-align: justify;
+          }
+
+          i  {
+            font-size: var(--fs-m);
+          }
+        }
+
+        .info {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: #9BBFAA;
+
+          .info__title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+              font-size: var(--fs-m);
+            }
+
+            h3 {
+              padding: 0;
+              margin: 0;
+              font-size: var(--fs-s);
+              color: var(--dark-hx-color);
+              text-align: center;
+              font-weight: 600;
+              letter-spacing: 1.25px;
+            }
+          }
+
+          .info__text {
+            p {
+              padding: 0;
+              margin: 0;
+              font-size: var(--fs-s);
+              letter-spacing: 1px;
+              line-height: 1.4rem;
+              text-align: justify;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .dice__container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kanit-ExtraLight", sans-serif;
+
+    button {
+      cursor: pointer;
+      height: 50px;
+      padding: 10px;
+      border: solid var(--dark-btn-rbg) 1px;
+      border-radius: 10px;
+      background-color: var(--dark-btn-color);
+      color: black;
+      font-size: var(--fs-m);
+      letter-spacing: 2px;
+    }
+  }
+
+  .swiper {
+    font-family: "Kanit-ExtraLight", sans-serif;
+
+    .card__container {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      border-radius: 10px;
+      margin: auto;
+      width: 100%;
+
+      i {
+        font-size: var(--fs-m);
+      }
+
+      .card__content {
+        width: 100%;
+        margin: 10px;
+        border: solid 3px black;
+        border-radius: 10px;
+        background-color: #CADDD2;
+        display: flex;
+        flex-direction: column;
+
+        .place__title {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-size: var(--fs-s);
+            color: var(--dark-hx-color);
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 1.25px;
+          }
+
+          h2 {
+            padding: 0;
+            margin: 0;
+            font-size: var(--fs-m);
+            color: var(--dark-hx-color);
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+
+        .place__info {
+          padding: 15px;
+
+          h2 {
+            padding: 0;
+            margin: 0;
+            font-size: var(--fs-m);
+            color: var(--dark-hx-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+
+          span {
+
+            font-size: var(--fs-s);
+            color: var(--dark-hx-color);
+            font-weight: 400;
+            letter-spacing: 1.25px;
+          }
+
+          .place__buy {
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            h2 {
+              flex-grow: 2;
+            }
+          }
+
+          .place__rent {
+            margin: 15px 0 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .element {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+
+              .home {
+                flex-grow: 2;
+              }
+            }
+          }
+
+          .benefit__info {
+            margin: 15px 0 15px 0;
+
+            p {
+              padding: 0;
+              margin: 0;
+              font-size: var(--fs-s);
+              letter-spacing: 1px;
+              line-height: 1.4rem;
+              text-align: justify;
+            }
+          }
+
+          .house__price {
+            margin-top: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .home {
+              flex-grow: 2;
+            }
+          }
+
+          .hr {
+            margin-bottom: 15px;
+          }
+
+          .place__sell {
+            margin: 15px 0 0 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+              font-size: var(--fs-s);
+              color: var(--dark-hx-color);
+              font-weight: 400;
+              letter-spacing: 1.25px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.green__bg {
+  background-color: #9BBFAA;
+  border-radius: 5px;
+}
+
+.red__bg {
+  background-color: #e74c3c;
+  border-radius: 5px;
+}
+
+.blue__bg {
+  background-color: #2980b9;
+  border-radius: 5px;
+}
+
+.orange__bg {
+  background-color: #f39c12;
+  border-radius: 5px;
+}
+
+.violet__bg {
+  background-color: #9b59b6;
+  border-radius: 5px;
+}
+
+.yellow__bg {
+  background-color: #fdcb6e;
+  border-radius: 5px;
+}
+
+
+#dice {
+  font-size: 6rem;
+  color: white;
+}

@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 50px 100px 50px 100px;
+}
+.header .logo__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.header .logo__container img {
+  height: 100px;
+}
+.header .nav__container {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  gap: 50px;
+}
+.header .nav__container a {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark-a-color);
+  letter-spacing: 0.85rem;
+}
+.header .nav__container a h1 {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2.5px;
+}
+.header .nav__container a i {
+  font-size: 25px;
+  color: var(--dark-hx-color);
+}
+.header .nav__container .dark__mode {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.header .nav__container .dark__mode:hover {
+  cursor: pointer;
+}
+.header .nav__container .dark__mode i {
+  font-size: 25px;
+  color: var(--dark-hx-color);
+}
+.header .nav__container .dark__mode i:hover {
+  opacity: 0.8;
+}
+@media (max-width: 65em) {
+  .header .nav__container .dark__mode {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
